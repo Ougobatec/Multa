@@ -1,0 +1,25 @@
+{
+  "name": "multa",
+  "version": "1.0.0",
+  "description": "Scalable SaaS platform developed using Node.js, Express, and PostgreSQL. Features a shared tenant table for managing tenant-specific data, ensuring isolation and security across multiple tenants.",
+  "main": "dist/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github-perso:Ougobatec/Multa.git"
+  },
+  "keywords": [
+    "nodejs",
+    "app",
+    "postgresql",
+    "express",
+    "typescript",
+    "saas",
+    "multitenant",
+    "multitenancy"
+  ],
+  "author": "Hugo Battaglia",
+  "license": "ISC"
+}
