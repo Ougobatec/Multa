@@ -2,14 +2,6 @@
   "name": "multa",
   "version": "1.0.0",
   "description": "Scalable SaaS platform developed using Node.js, Express, and PostgreSQL. Features a shared tenant table for managing tenant-specific data, ensuring isolation and security across multiple tenants.",
-  "main": "dist/server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github-perso:Ougobatec/Multa.git"
-  },
   "keywords": [
     "nodejs",
     "app",
@@ -20,6 +12,41 @@
     "multitenant",
     "multitenancy"
   ],
+  "homepage": "https://github.com/Ougobatec/Multa.git#readme",
+  "bugs": {
+    "url": "https://github.com/Ougobatec/Multa.git/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ougobatec/Multa.git"
+  },
+  "license": "ISC",
   "author": "Hugo Battaglia",
-  "license": "ISC"
+  "type": "module",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsup src/server.ts --format esm,cjs --dts",
+    "start": "node dist/server.js",
+    "lint": "eslint src tests --ext .ts",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.40.0",
+    "@typescript-eslint/parser": "^8.40.0",
+    "@vitest/coverage-v8": "^3.2.4",
+    "@vitest/ui": "^3.2.4",
+    "eslint": "^9.33.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.6.2",
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.4",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
 }
